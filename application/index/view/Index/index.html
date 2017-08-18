@@ -1,37 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>手机号码归属地查询</title>
-    <link href="/static/index/css/style.css" type="text/css" rel="stylesheet">
-    <meta http-equiv="x-ua-compatible" content="ie=7" />
-    <script>
-        var m = location.search.match(/m\=[^&]*/ig);
-        if(m!=null && m[0]!=null) {
-            m = m[0].split('=');
-            location.href = "  http://www.showji.com/search.htm?m=" + m[1];
-        }
-    </script>
-    <script>window.onload = function(){ document.getElementById("aswift_0_anchor").getElementsByTagName("iframe")[0].height=35; };
-    </script>
+    <link href="/static/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="/static/bootstrap.min.js"></script>
 </head>
 <body>
-<script type="text/javascript" src=" /static/indexjs/base.js"></script>
-<div class="top"><a href="" class="sel">手机号码归属地查询</a></div>
-<div class="logo">手机定位手机归属查询</div>
-<div class="txtad"></div>
-<div class="search">
-    <form action="{:url('Search/index')}" method="post">
-        <input type="text" name="m" id="m" placeholder="手机号码" maxlength="100">
-        <span class="btn_wr">
-            <input type="submit" value="查 询" id="btnQuery" class="btn" >
-        </span>
-    </form>
-    <script type="text/javascript">
-        document.getElementById("m").focus();
-    </script>
-</div>
-<div class="foot">&copy;手机号码归属地查询</div>
 
+<h2 style="text-align: center" class="text-primary">手机归属地查询</h2>
+<div style="position: absolute;left:40%;top: 40%">
+    <form action="{:url('Search/index')}" method="post" class="form-inline" role="form">
+        <input type="text" name="m"  placeholder="手机号码" class="form-control">
+        <input type="submit" value="查 询" class="btn btn-default" >
+    </form>
+</div>
+<div style="position: absolute;left: 45%;bottom: 10%">&copy;<a href="/">手机号码归属地查询</a></div>
 </body>
 </html>

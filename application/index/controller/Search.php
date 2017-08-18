@@ -39,9 +39,14 @@ class Search extends Controller
         }
         $res=curl_exec($curl);//执行查询句柄
         curl_close($curl);    //关闭查询连接
-        $resu=json_decode($res,true);//将json数据解码为php数组
-        $this->assign('num',$num);
-        $this->assign('res',$resu);
-        return $this->fetch('index');
+        $resu=json_decode($res,true);//将json数据解码为php数组4
+
+        if($resu['showapi_res_body']['ret_code']==-1){
+            return $this->error('没有查询结果，请重新输入','Index/index');
+        }else{
+            $this->assign('num',$num);
+            $this->assign('res',$resu);
+            return $this->fetch('index');
+        }
     }
 }
