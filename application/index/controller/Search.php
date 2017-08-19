@@ -19,7 +19,7 @@ class Search extends Controller
         $querys="num=".$num;                                 //查询参数
         $url=$host.$path.'?'.$querys;                           //完整请求链接
 
-        $appcode='030434e4440d422eaa33b91ae5487eea';            //接口app码
+        $appcode='';            //接口app码
         $headers = array();
         array_push($headers, "Authorization:APPCODE " . $appcode);//请求头
 
