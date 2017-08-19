@@ -47,6 +47,7 @@ class Search extends Controller
             $this->assign('num',$num);
             $this->assign('res',$resu);
             return $this->fetch('index');
+
         }
     }
 }

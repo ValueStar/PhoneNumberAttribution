@@ -6,13 +6,13 @@
     <link href="/static/bootstrap.min.css" type="text/css" rel="stylesheet">
     <script src="/static/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background:url('/static/bing_image.php')">
 
 <h2 style="text-align: center" class="text-primary">手机归属地查询</h2>
 <div style="position: absolute;left:40%;top: 40%">
     <form action="{:url('Search/index')}" method="post" class="form-inline" role="form">
         <input type="text" name="m"  placeholder="手机号码" class="form-control">
-        <input type="submit" value="查 询" class="btn btn-default" >
+        <input type="submit" value="查 询" class="btn btn-default"  >
     </form>
 </div>
 <div style="position: absolute;left: 45%;bottom: 10%">&copy;<a href="/">手机号码归属地查询</a></div>
